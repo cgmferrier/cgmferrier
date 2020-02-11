@@ -1,0 +1,14 @@
+html, body {
+  color: get-color(core, text);
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+main, footer {
+  background: get-color(core, background);
+}
+
+h1, h2, h3 {
+  margin: 0;
+}

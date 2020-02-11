@@ -1,0 +1,4 @@
+.emphasized {
+  color: get-color(core, emphasis);
+  text-shadow: -1px 0 get-color(header, shadow), 0 1px get-color(header, shadow), 1px 0 get-color(header, shadow), 0 -1px get-color(header, shadow);
+}

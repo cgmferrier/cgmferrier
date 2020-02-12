@@ -1,36 +1,20 @@
 <header>
   <div class="header__title">
-    <h1 class="header__h1">Hi, I am <span class="emphasized" title="Cécile Ferrier">Cécile Ferrier</span>.</h1>
+    <h1 class="header__h1">Hi, I'm <span class="emphasized" title="Cécile Ferrier">Cécile Ferrier</span>.</h1>
     <h2 class="header__h2">I'm a frontend developer.</h2>
   </div>
 </header>
 <main>
   <section class="nav-bar">
     <ul class="nav-bar__list">
-      <li class="nav-bar__item"><h3 title="Home">Home</h3></li>
-      <li class="nav-bar__item"><h3 title="About">About</h3></li>
-      <li class="nav-bar__item"><h3 title="Projects">Projects</h3></li>
-      <li class="nav-bar__item"><h3 title="Contact">Contact</h3></li>
+      <li class="nav-bar__item"><img src="/assets/img/leaf.svg" class="logo--small"></li>
+      <li class="nav-bar__item"><h3 title="Home" class="nav-bar__title">Home</h3></li>
+      <li class="nav-bar__item"><h3 title="About" class="nav-bar__title">About</h3></li>
+      <li class="nav-bar__item"><h3 title="Projects" class="nav-bar__title">Projects</h3></li>
+      <li class="nav-bar__item"><h3 title="Contact" class="nav-bar__title">Contact</h3></li>
     </ul>
   </section>
   <section class="profile">
-    <article class="profile__goals">
-      <ul class="profile__list">
-        <li class="profile__item">
-          <fa-icon [icon]="['fas', 'rocket']" class="profile__icon"></fa-icon>
-          <span class="profile__title">Smooth</span>
-        </li>
-        <li class="profile__item">
-          <fa-icon [icon]="['fas', 'user-check']" class="profile__icon"></fa-icon>
-          <span class="profile__title">User friendly</span>
-        </li>
-        <li class="profile__item">
-          <fa-icon [icon]="['fas', 'laptop-code']" class="profile__icon"></fa-icon>
-          <span class="profile__title">Responsive</span>
-        </li>
-      </ul>
-    </article>
-
     <article class="profile__detail">
       <div class="profile__presentation">
         <h3>About myself</h3>
@@ -39,10 +23,13 @@
           a framework I've been using for five years.
         </p>
         <p>
-          I aim to implement reliable interfaces respecting an optimised <strong>user experience</strong>.
+          I aim to implement reliable interfaces offering an optimised <strong>user experience</strong>.
         </p>
         <p>
-          My expertise also relies in <strong>digital maps</strong> and way finding.
+          I can also help you approaching frontend development with <strong>best practises</strong> and adapted code structure.
+        </p>
+        <p>
+          My expertise also lies within <strong>digital maps</strong> and way finding.
         </p>
         <p>
           Contact me for further information, and let's work together !
@@ -50,7 +37,29 @@
       </div>
       <div class="profile__picture"></div>
     </article>
-    // technos
+    <article class="profile__work">
+      <ul class="profile__list">
+        <li class="profile__item">
+          <div class="profile__icon-container">
+            <fa-icon [icon]="['fas', 'rocket']" class="profile__icon"></fa-icon>
+          </div>
+          <span class="profile__title">Fast</span>
+        </li>
+        <li class="profile__item">
+          <div class="profile__icon-container">
+            <fa-icon [icon]="['fas', 'user-check']" class="profile__icon"></fa-icon>
+          </div>
+          <span class="profile__title">User friendly</span>
+        </li>
+        <li class="profile__item">
+          <div class="profile__icon-container">
+            <fa-icon [icon]="['fas', 'laptop-code']" class="profile__icon"></fa-icon>
+          </div>
+          <span class="profile__title">Responsive</span>
+        </li>
+      </ul>
+      <app-skills-chart></app-skills-chart>
+    </article>
   </section>
   <section class="project">
     // projects

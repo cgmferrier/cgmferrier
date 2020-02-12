@@ -1,11 +1,10 @@
 .profile {
-  &__goals {
-    align-items: center;
+  padding: 0 25px;
+
+  &__detail {
     display: flex;
-    justify-content: space-around;
-    list-style: none;
-    margin: 0;
-    padding: 50px 0;
+    align-items: center;
+    justify-content: center;
   }
 
   &__icon {
@@ -16,13 +15,40 @@
 
   &__item {
     background: rgba(get-color(core, light-brown), 0.7);
-    border-radius: 75px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 0 get-color(navbar, box-shadow);
     align-items: center;
     display: flex;
     height: 150px;
     justify-content: center;
     position: relative;
     width: 150px;
+  }
+
+  &__list {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 50px 0;
+  }
+
+  &__presentation {
+    margin-right: 50px;
+    max-width: 30%;
+    text-align: right;
+  }
+
+  &__picture {
+    background-image: url('/assets/img/portrait.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 0 get-color(navbar, box-shadow);
+    height: 400px;
+    min-width: 300px;
   }
 
   &__title {

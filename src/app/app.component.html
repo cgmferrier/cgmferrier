@@ -14,23 +14,42 @@
     </ul>
   </section>
   <section class="profile">
-    <ul class="profile__goals">
-      <li class="profile__item">
-        <fa-icon [icon]="['fas', 'rocket']" class="profile__icon"></fa-icon>
-        <span class="profile__title">Smooth</span>
-      </li>
-      <li class="profile__item">
-        <fa-icon [icon]="['fas', 'user-check']" class="profile__icon"></fa-icon>
-        <span class="profile__title">User friendly</span>
-      </li>
-      <li class="profile__item">
-        <fa-icon [icon]="['fas', 'laptop-code']" class="profile__icon"></fa-icon>
-        <span class="profile__title">Responsive</span>
-      </li>
-    </ul>
-    // bring to life smooth and user-friendly interfaces
-    // specialties: Frontend - Geomatics
-    // picture
+    <article class="profile__goals">
+      <ul class="profile__list">
+        <li class="profile__item">
+          <fa-icon [icon]="['fas', 'rocket']" class="profile__icon"></fa-icon>
+          <span class="profile__title">Smooth</span>
+        </li>
+        <li class="profile__item">
+          <fa-icon [icon]="['fas', 'user-check']" class="profile__icon"></fa-icon>
+          <span class="profile__title">User friendly</span>
+        </li>
+        <li class="profile__item">
+          <fa-icon [icon]="['fas', 'laptop-code']" class="profile__icon"></fa-icon>
+          <span class="profile__title">Responsive</span>
+        </li>
+      </ul>
+    </article>
+
+    <article class="profile__detail">
+      <div class="profile__presentation">
+        <h3>About myself</h3>
+        <p>
+          I have a passion for frontend technologies, especially for <strong>Angular</strong>,
+          a framework I've been using for five years.
+        </p>
+        <p>
+          I aim to implement reliable interfaces respecting an optimised <strong>user experience</strong>.
+        </p>
+        <p>
+          My expertise also relies in <strong>digital maps</strong> and way finding.
+        </p>
+        <p>
+          Contact me for further information, and let's work together !
+        </p>
+      </div>
+      <div class="profile__picture"></div>
+    </article>
     // technos
   </section>
   <section class="project">

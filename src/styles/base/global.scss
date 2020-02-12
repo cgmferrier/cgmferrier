@@ -1,8 +1,11 @@
 html, body {
   color: get-color(core, text);
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   height: 100%;
   margin: 0;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 main, footer {

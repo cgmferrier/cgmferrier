@@ -10,8 +10,9 @@ export class SkillsChartComponent {
   get data(): any[] {
     return [
       {
-        data: [90, 90, 85, 85, 70, 70, 60, 50],
+        data: [90, 90, 90, 85, 85, 70, 70, 60, 50],
         backgroundColor: [
+          'rgba(203, 209, 142, 0.5)',
           'rgba(203, 209, 142, 0.5)',
           'rgba(203, 209, 142, 0.5)',
           'rgba(203, 209, 142, 0.5)',
@@ -31,8 +32,10 @@ export class SkillsChartComponent {
           'rgba(203, 209, 142, 1)',
           'rgba(203, 209, 142, 1)',
           'rgba(203, 209, 142, 1)',
+          'rgba(203, 209, 142, 1)',
         ],
         hoverBackgroundColor: [
+          'rgba(203, 209, 142, 1)',
           'rgba(203, 209, 142, 1)',
           'rgba(203, 209, 142, 1)',
           'rgba(203, 209, 142, 1)',
@@ -51,13 +54,14 @@ export class SkillsChartComponent {
           'rgba(203, 209, 142, 1)',
           'rgba(203, 209, 142, 1)',
           'rgba(203, 209, 142, 1)',
+          'rgba(203, 209, 142, 1)',
         ],
       }
     ];
   }
 
   get labels(): string[] {
-    return ['Angular', 'HTML', 'SASS', 'CSS', 'Openlayers', 'Mapbox', 'Vuejs', 'React'];
+    return ['Angular', 'NgRx', 'HTML', 'SASS', 'CSS', 'Openlayers', 'Mapbox', 'Vuejs', 'React'];
   }
 
   get options(): any {

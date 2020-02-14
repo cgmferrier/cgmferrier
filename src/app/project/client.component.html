@@ -1,0 +1,4 @@
+<a [href]="client.url" [title]="client.company" target="_blank" class="client__link">
+  <div class="client__image" [style.background-image]="'url(\'' + client.imageUrl + '\')'"></div>
+  <div class="client__name">{{ client.company }}</div>
+</a>

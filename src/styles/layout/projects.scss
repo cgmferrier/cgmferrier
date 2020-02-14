@@ -1,0 +1,10 @@
+.project {
+  padding: 0 25px;
+
+  &__list {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}

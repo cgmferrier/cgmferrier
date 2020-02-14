@@ -10,23 +10,23 @@
       <li class="nav-bar__item"><img src="/assets/img/leaf.svg" class="logo--small"></li>
       <li class="nav-bar__item"><h3 title="Home" class="nav-bar__title">Home</h3></li>
       <li class="nav-bar__item"><h3 title="About" class="nav-bar__title">About</h3></li>
-      <li class="nav-bar__item"><h3 title="Projects" class="nav-bar__title">Projects</h3></li>
+      <li class="nav-bar__item"><h3 title="Clients" class="nav-bar__title">Clients</h3></li>
       <li class="nav-bar__item"><h3 title="Contact" class="nav-bar__title">Contact</h3></li>
     </ul>
   </section>
   <section class="profile">
     <article class="profile__detail">
       <div class="profile__presentation">
-        <h3>About myself</h3>
+        <h2>About myself</h2>
         <p>
           I have a passion for frontend technologies, especially for <strong>Angular</strong>,
           a framework I've been using for five years.
         </p>
         <p>
-          I aim to implement reliable interfaces offering an optimised <strong>user experience</strong>.
+          I aim to implement reliable <strong>web applications</strong> offering an optimised user experience.
         </p>
         <p>
-          I can also help you approaching frontend development with <strong>best practises</strong> and adapted code structure.
+          I can also help you approach frontend development with the <strong>best practice</strong> and adapted code structure.
         </p>
         <p>
           My expertise also lies within <strong>digital maps</strong> and way finding.
@@ -62,8 +62,13 @@
     </article>
   </section>
   <section class="project">
-    // projects
-    // living map, polestar, appscatter, sensat, runpath, send technology
+    <article>
+      <h2>Clients</h2>
+      <p>Here are some of the companies I've collaborated with.</p>
+    </article>
+    <article class="project__list">
+      <app-client *ngFor="let client of clients" [client]="client"></app-client>
+    </article>
   </section>
 </main>
 <footer class="social">

@@ -9,7 +9,21 @@ html, body {
 }
 
 main, footer {
+  color: get-color(core, text);
+  font: 400 18px/24px $font;
   background: get-color(core, background);
+  padding: 80px;
+
+  a {
+    color: get-color(core, link);
+    font: 600 18px/24px $font;
+    text-decoration: none;
+    transition: color ease-in-out 250ms;
+
+    &:hover {
+      color: get-color(core, link-hover);
+    }
+  }
 }
 
 h1, h2, h3 {
@@ -18,4 +32,8 @@ h1, h2, h3 {
 
 h1 {
   font: 500 64px/80px $font;
+}
+
+h3 {
+  font: 500 48px/64px $font;
 }

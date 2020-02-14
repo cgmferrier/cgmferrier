@@ -1,0 +1,21 @@
+.about {
+  &__skill {
+    & > img {
+      height: 64px;
+      width: 64px;
+    }
+  }
+
+  &__skills {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__techs {
+    padding-top: 60px;
+  }
+}

@@ -1,6 +1,6 @@
 html, body {
   color: get-color(core, text);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   height: 100%;
   margin: 0;
 
@@ -16,6 +16,6 @@ h1, h2, h3 {
   margin: 0;
 }
 
-.logo {
-  height: 50px;
+h1 {
+  font: 500 64px/80px $font;
 }

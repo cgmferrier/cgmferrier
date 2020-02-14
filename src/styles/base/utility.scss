@@ -2,3 +2,25 @@
   color: get-color(core, emphasis);
   text-shadow: -1px 0 get-color(header, shadow), 0 1px get-color(header, shadow), 1px 0 get-color(header, shadow), 0 -1px get-color(header, shadow);
 }
+
+.button {
+  background: get-color(button, background);
+  border: 2px solid get-color(button, border);
+  color: get-color(button, text);
+  cursor: pointer;
+  font: 600 16px/24px $font;
+  letter-spacing: 4px;
+  padding: 16px 48px;
+  text-transform: uppercase;
+
+  transition: all ease-in-out 250ms;
+
+  &:hover {
+    background: get-color(button, border);
+    color: get-color(core, text);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}

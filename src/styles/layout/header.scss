@@ -6,14 +6,89 @@ header {
   background-size: cover;
   height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .header {
-  &__title {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+  &__body {
+    padding: 80px;
+  }
+
+  &__filter {
+    background: get-color(header, filter);
+    position: absolute;
     height: 100%;
-    justify-content: center;
+    width: 100%;
+  }
+
+  &__footer {
+    padding: 60px 80px;
+    position: relative;
+  }
+
+  &__item {
+    font: 400 16px/64px $font;
+    margin-right: 80px;
+
+    & > a {
+      color: get-color(header, text);
+      text-decoration: none;
+    }
+  }
+
+  &__job {
+    color: get-color(header, text);
+    font: 400 24px/40px $font;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    align-items: center;
+    color: get-color(header, text);
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  &__me {
+    text-align: center;
+  }
+
+  &__name {
+    color: get-color(header, text);
+    font: 700 48px/64px $font;
+    text-transform: lowercase;
+  }
+
+  &__name, &__job {
+    display: block;
+  }
+
+  &__list {
+    position: relative;
+  }
+
+  &__summary {
+    color: get-color(header, text);
+    font: 400 18px/24px $font;
+    margin-top: 24px;
+    position: relative;
+  }
+
+  &__title {
+    color: get-color(header, text);
+    position: relative;
+  }
+
+  &__top {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px;
+    position: relative;
+    width: calc(100% - 80px);
+    z-index: 1;
   }
 }

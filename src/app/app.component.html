@@ -1,74 +1,91 @@
 <header>
-  <div class="header__title">
-    <h1 class="header__h1">Hi, I'm <span class="emphasized" title="Cécile Ferrier">Cécile Ferrier</span>.</h1>
-    <h2 class="header__h2">I'm a frontend developer.</h2>
-  </div>
+  <div class="header__filter"></div>
+  <section class="header__top">
+    <div class="header__me">
+      <span class="header__name">Cécile Ferrier</span>
+      <span class="header__job">Front End Developer</span>
+    </div>
+    <div class="header__navigation">
+      <ul class="header__list">
+        <li class="header__item" title="About"><a href="#">About</a></li>
+        <li class="header__item" title="Work"><a href="#">Work</a></li>
+        <li class="header__item" title="Contact"><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="header__body">
+    <h1 class="header__title">Bring web applications to life.</h1>
+    <p class="header__summary">With <strong>five years</strong> experience, I aim to develop fast, user-friendly and responsive web applications.</p>
+  </section>
+  <section class="header__footer">
+    <button class="button" type="button">View Work</button>
+  </section>
 </header>
 <main>
-  <section class="nav-bar">
-    <ul class="nav-bar__list">
-      <li class="nav-bar__item"><img src="/assets/img/leaf.svg" class="logo--small"></li>
-      <li class="nav-bar__item"><h3 title="Home" class="nav-bar__title">Home</h3></li>
-      <li class="nav-bar__item"><h3 title="About" class="nav-bar__title">About</h3></li>
-      <li class="nav-bar__item"><h3 title="Clients" class="nav-bar__title">Clients</h3></li>
-      <li class="nav-bar__item"><h3 title="Contact" class="nav-bar__title">Contact</h3></li>
-    </ul>
-  </section>
+<!--  <section class="nav-bar">-->
+<!--    <ul class="nav-bar__list">-->
+<!--      <li class="nav-bar__item"><img src="/assets/img/leaf.svg" class="logo&#45;&#45;small"></li>-->
+<!--      <li class="nav-bar__item"><h3 title="Home" class="nav-bar__title">Home</h3></li>-->
+<!--      <li class="nav-bar__item"><h3 title="About" class="nav-bar__title">About</h3></li>-->
+<!--      <li class="nav-bar__item"><h3 title="Clients" class="nav-bar__title">Clients</h3></li>-->
+<!--      <li class="nav-bar__item"><h3 title="Contact" class="nav-bar__title">Contact</h3></li>-->
+<!--    </ul>-->
+<!--  </section>-->
   <section class="profile">
-    <article class="profile__detail">
-      <div class="profile__presentation">
-        <h2>About myself</h2>
-        <p>
-          I have a passion for frontend technologies, especially for <strong>Angular</strong>,
-          a framework I've been using for five years.
-        </p>
-        <p>
-          I aim to implement reliable <strong>web applications</strong> offering an optimised user experience.
-        </p>
-        <p>
-          I can also help you approach frontend development with the <strong>best practice</strong> and adapted code structure.
-        </p>
-        <p>
-          My expertise also lies within <strong>digital maps</strong> and way finding.
-        </p>
-        <p>
-          Contact me for further information, and let's work together !
-        </p>
-      </div>
-      <div class="profile__picture"></div>
-    </article>
-    <article class="profile__work">
-      <ul class="profile__list">
-        <li class="profile__item">
-          <div class="profile__icon-container">
-            <fa-icon [icon]="['fas', 'rocket']" class="profile__icon"></fa-icon>
-          </div>
-          <span class="profile__title">Fast</span>
-        </li>
-        <li class="profile__item">
-          <div class="profile__icon-container">
-            <fa-icon [icon]="['fas', 'user-check']" class="profile__icon"></fa-icon>
-          </div>
-          <span class="profile__title">User friendly</span>
-        </li>
-        <li class="profile__item">
-          <div class="profile__icon-container">
-            <fa-icon [icon]="['fas', 'laptop-code']" class="profile__icon"></fa-icon>
-          </div>
-          <span class="profile__title">Responsive</span>
-        </li>
-      </ul>
-      <app-skills-chart></app-skills-chart>
-    </article>
+<!--    <article class="profile__detail">-->
+<!--      <div class="profile__presentation">-->
+<!--        <h2>About myself</h2>-->
+<!--        <p>-->
+<!--          I have a passion for frontend technologies, especially for <strong>Angular</strong>,-->
+<!--          a framework I've been using for five years.-->
+<!--        </p>-->
+<!--        <p>-->
+<!--          I aim to implement reliable <strong>web applications</strong> offering an optimised user experience.-->
+<!--        </p>-->
+<!--        <p>-->
+<!--          I can also help you approach frontend development with the <strong>best practice</strong> and adapted code structure.-->
+<!--        </p>-->
+<!--        <p>-->
+<!--          My expertise also lies within <strong>digital maps</strong> and way finding.-->
+<!--        </p>-->
+<!--        <p>-->
+<!--          Contact me for further information, and let's work together !-->
+<!--        </p>-->
+<!--      </div>-->
+<!--      <div class="profile__picture"></div>-->
+<!--    </article>-->
+<!--    <article class="profile__work">-->
+<!--      <ul class="profile__list">-->
+<!--        <li class="profile__item">-->
+<!--          <div class="profile__icon-container">-->
+<!--            <fa-icon [icon]="['fas', 'rocket']" class="profile__icon"></fa-icon>-->
+<!--          </div>-->
+<!--          <span class="profile__title">Fast</span>-->
+<!--        </li>-->
+<!--        <li class="profile__item">-->
+<!--          <div class="profile__icon-container">-->
+<!--            <fa-icon [icon]="['fas', 'user-check']" class="profile__icon"></fa-icon>-->
+<!--          </div>-->
+<!--          <span class="profile__title">User friendly</span>-->
+<!--        </li>-->
+<!--        <li class="profile__item">-->
+<!--          <div class="profile__icon-container">-->
+<!--            <fa-icon [icon]="['fas', 'laptop-code']" class="profile__icon"></fa-icon>-->
+<!--          </div>-->
+<!--          <span class="profile__title">Responsive</span>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--      <app-skills-chart></app-skills-chart>-->
+<!--    </article>-->
   </section>
   <section class="project">
-    <article>
-      <h2>Clients</h2>
-      <p>Here are some of the companies I've collaborated with.</p>
-    </article>
-    <article class="project__list">
-      <app-client *ngFor="let client of clients" [client]="client"></app-client>
-    </article>
+<!--    <article>-->
+<!--      <h2>Clients</h2>-->
+<!--      <p>Here are some of the companies I've collaborated with.</p>-->
+<!--    </article>-->
+<!--    <article class="project__list">-->
+<!--      <app-client *ngFor="let client of clients" [client]="client"></app-client>-->
+<!--    </article>-->
   </section>
 </main>
 <footer class="social">

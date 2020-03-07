@@ -1,0 +1,38 @@
+.about {
+  &__skill {
+    margin: 10px;
+    transition: transform ease-in-out 250ms;
+    width: 70px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    & > img {
+      height: 100%;
+      transition: transform ease-in-out 250ms;
+      width: 100%;
+    }
+
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+
+  &__skills {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__techs {
+    padding-top: 60px;
+  }
+}

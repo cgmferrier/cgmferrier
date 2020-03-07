@@ -1,0 +1,32 @@
+.footer {
+  padding-top: 30px;
+  text-align: center;
+
+  &__copyright {
+    font: 400 14px/24px $font;
+  }
+
+  &__icon {
+    font-size: 2em;
+    margin: 0 20px;
+
+    & > a {
+      color: get-color(core, text);
+      text-decoration: none;
+      transition: color ease-in-out 250ms;
+
+      &:hover {
+        color: get-color(header, link, hover);
+      }
+    }
+  }
+
+  &__network {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}

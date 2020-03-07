@@ -1,16 +1,32 @@
 $colors: (
+  button: (
+    background: rgba(255,255,255,0.24),
+    border: #fff,
+    text: #fff,
+  ),
   client: (
     box-shadow: rgba(48, 33, 24, 0.1),
   ),
   core: (
-    background: #FFFBF7,
-    text: #302118,
+    background: #F5F5F5,
+    box-shadow: rgba(255,255,255,0.24),
+    link: #57AEFA,
+    link-hover: #152B3D,
+    text: #333333,
     emphasis: #D1D3BD,
     light-brown: #907059,
     yellow: #D8A957,
   ),
   header: (
-    shadow: rgba(0, 0, 0, 0.4),
+    box-shadow: rgba(0, 0, 0, 0.4),
+    filter: rgba(0,0,0,0.35),
+    link: (
+      hover: #FA5757,
+    ),
+    text: #ffffff,
+  ),
+  logo: (
+    text: #152B3D,
   ),
   navbar: (
     background: #302118,

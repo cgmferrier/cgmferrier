@@ -6,14 +6,102 @@ header {
   background-size: cover;
   height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .header {
-  &__title {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+  &__body {
+    padding: 80px;
+  }
+
+  &__filter {
+    background: get-color(header, filter);
+    position: absolute;
     height: 100%;
-    justify-content: center;
+    width: 100%;
+  }
+
+  &__footer {
+    padding: 60px 80px;
+    position: relative;
+  }
+
+  &__item {
+    font: 400 16px/64px $font;
+    letter-spacing: 6.4px;
+    margin-right: 80px;
+    transition: font-weight ease-in-out 250ms, letter-spacing ease-in-out 250ms;
+
+    & > a {
+      color: get-color(header, text);
+      text-decoration: none;
+      transition: color ease-in-out 250ms;
+
+      &:hover {
+        color: get-color(header, link, hover);
+      }
+    }
+
+    &:hover {
+      font-weight: 600;
+      letter-spacing: 7.4px;
+    }
+  }
+
+  &__job {
+    color: get-color(header, text);
+    font: 400 24px/40px $font;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    align-items: center;
+    color: get-color(header, text);
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  &__me {
+    width: 50%;
+  }
+
+  &__name {
+    color: get-color(header, text);
+    font: 700 48px/64px $font;
+    text-transform: lowercase;
+  }
+
+  &__name, &__job {
+    display: block;
+  }
+
+  &__navigation {
+    width: 50%;
+  }
+
+  &__summary {
+    color: get-color(header, text);
+    font: 400 18px/24px $font;
+    margin-top: 24px;
+    position: relative;
+  }
+
+  &__title {
+    color: get-color(header, text);
+    position: relative;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px;
+    position: relative;
+    width: calc(100% - 160px);
+    z-index: 1;
   }
 }

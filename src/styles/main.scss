@@ -1,11 +1,16 @@
 @import 'helpers/functions';
+@import 'helpers/vars';
 
 @import 'base/colors';
 @import 'base/global';
 @import 'base/utility';
 
+@import 'layout/about';
+@import 'layout/contact';
+@import 'layout/footer';
 @import 'layout/header';
 @import 'layout/logo';
 @import 'layout/navbar';
 @import 'layout/profile';
 @import 'layout/projects';
+@import 'layout/work';

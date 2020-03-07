@@ -5,6 +5,10 @@ import {
   faRocket,
   faUserCheck,
 } from '@fortawesome/free-solid-svg-icons';
+import {
+  faInstagram,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons';
 
 @NgModule({
   imports: [FontAwesomeModule],
@@ -13,7 +17,9 @@ import {
 export class IconsModule {
   constructor(library: FaIconLibrary) {
     library.addIcons(
+      faInstagram,
       faLaptopCode,
+      faLinkedin,
       faRocket,
       faUserCheck,
     );

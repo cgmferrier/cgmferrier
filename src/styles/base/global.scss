@@ -1,6 +1,6 @@
 html, body {
   color: get-color(core, text);
-  font-family: 'Montserrat', sans-serif;
+  font: 400 18px/24px $font;
   height: 100%;
   margin: 0;
 
@@ -10,20 +10,8 @@ html, body {
 
 main, footer {
   color: get-color(core, text);
-  font: 400 18px/24px $font;
   background: get-color(core, background);
-  padding: 80px;
-
-  a {
-    color: get-color(core, link);
-    font: 600 18px/24px $font;
-    text-decoration: none;
-    transition: color ease-in-out 250ms;
-
-    &:hover {
-      color: get-color(core, link-hover);
-    }
-  }
+  padding: 0 80px;
 }
 
 h1, h2, h3 {
@@ -36,4 +24,18 @@ h1 {
 
 h3 {
   font: 500 48px/64px $font;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  height: 100%;
+  padding-bottom: 80px;
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
 }

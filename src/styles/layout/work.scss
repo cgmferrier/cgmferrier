@@ -1,0 +1,36 @@
+.work {
+  &__companies {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__company {
+    margin: 10px;
+    max-width: 200px;
+    transition: transform ease-in-out 250ms;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    &--shadow {
+      box-shadow: 0 0 5px 0 get-color(navbar, box-shadow);
+    }
+  }
+}

@@ -28,11 +28,23 @@ header {
 
   &__item {
     font: 400 16px/64px $font;
+    letter-spacing: 6.4px;
     margin-right: 80px;
+    transition: font-weight ease-in-out 250ms, letter-spacing ease-in-out 250ms;
 
     & > a {
       color: get-color(header, text);
       text-decoration: none;
+      transition: color ease-in-out 250ms;
+
+      &:hover {
+        color: get-color(header, link, hover);
+      }
+    }
+
+    &:hover {
+      font-weight: 600;
+      letter-spacing: 7.4px;
     }
   }
 
@@ -46,14 +58,16 @@ header {
     align-items: center;
     color: get-color(header, text);
     display: flex;
+    justify-content: space-evenly;
     list-style: none;
     margin: 0;
     padding: 0;
+    position: relative;
     text-transform: uppercase;
   }
 
   &__me {
-    text-align: center;
+    width: 50%;
   }
 
   &__name {
@@ -66,8 +80,8 @@ header {
     display: block;
   }
 
-  &__list {
-    position: relative;
+  &__navigation {
+    width: 50%;
   }
 
   &__summary {
@@ -83,12 +97,11 @@ header {
   }
 
   &__top {
-    align-items: baseline;
     display: flex;
     justify-content: space-between;
     padding: 80px;
     position: relative;
-    width: calc(100% - 80px);
+    width: calc(100% - 160px);
     z-index: 1;
   }
 }

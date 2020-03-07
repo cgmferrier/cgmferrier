@@ -24,3 +24,23 @@
     outline: 0;
   }
 }
+
+.link {
+  color: get-color(core, link);
+  font: 600 18px/24px $font;
+  text-decoration: none;
+  transition: color ease-in-out 250ms;
+
+  &:hover {
+    color: get-color(core, link-hover);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.article__title {
+  display: inline-block;
+  padding: 80px 0 0;
+}

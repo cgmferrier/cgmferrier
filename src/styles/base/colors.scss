@@ -20,6 +20,9 @@ $colors: (
   header: (
     box-shadow: rgba(0, 0, 0, 0.4),
     filter: rgba(0,0,0,0.35),
+    link: (
+      hover: #FA5757,
+    ),
     text: #ffffff,
   ),
   logo: (

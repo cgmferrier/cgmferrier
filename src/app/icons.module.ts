@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
+  faBars,
   faLaptopCode,
   faRocket,
   faUserCheck,
@@ -17,6 +18,7 @@ import {
 export class IconsModule {
   constructor(library: FaIconLibrary) {
     library.addIcons(
+      faBars,
       faInstagram,
       faLaptopCode,
       faLinkedin,

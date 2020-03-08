@@ -1,5 +1,6 @@
 @import 'base/colors';
 @import 'helpers/functions';
+@import 'helpers/vars';
 
 :host {
   background: get-color(navbar, background);
@@ -29,12 +30,55 @@
     }
   }
 
-   .header__list {
+  .header__list {
     padding: 0 80px;
   }
 
   .header__logo {
     color: get-color(navbar, logo);
     padding-left: 80px;
+  }
+
+  .header__menu-icon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width : $max-device-width) {
+  :host {
+    .header__list {
+      padding: 0 2.4em;
+    }
+
+    .header__logo {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 2em;
+      width: 100%;
+    }
+
+    .header__menu-icon {
+      display: none;
+    }
+
+    .nav-bar__container {
+      height: auto !important;
+    }
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  :host {
+    .header {
+      &__list {
+        display: none;
+      }
+
+      &__menu-icon {
+        display: block;
+        font: 2.5em/1.5em $font;
+      }
+    }
   }
 }

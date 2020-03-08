@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, HostBinding, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sticky-nav-bar',
@@ -19,14 +19,19 @@ export class StickyNavBarComponent implements OnInit {
   navBar: HTMLElement;
   sectionActive: string;
   showNavBar = false;
+  windowWidth = window.innerWidth;
   workSection: HTMLElement;
 
   @HostListener('window:scroll', ['$event'])
   onPageScroll(): void {
-    const navBarYPosition = this.navBar.offsetTop + this.navBar.offsetHeight;
-    const scrollPosition = window.scrollY;
-    this.showNavBar = scrollPosition > navBarYPosition;
+    this.triggerNavBar();
     this.sectionActive = this.activeSection;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event): void {
+    this.windowWidth = event.target.innerWidth;
+    this.triggerNavBar();
   }
 
   get activeSection(): string {
@@ -57,5 +62,11 @@ export class StickyNavBarComponent implements OnInit {
     this.contactSection = document.getElementById('section__contact');
     this.navBar = document.getElementById('header-list');
     this.workSection = document.getElementById('section__work');
+  }
+
+  private triggerNavBar(): void {
+    const navBarYPosition = this.navBar.offsetTop + this.navBar.offsetHeight;
+    const scrollPosition = window.scrollY;
+    this.showNavBar = this.windowWidth > 860 ? scrollPosition > navBarYPosition : true;
   }
 }

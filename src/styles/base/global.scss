@@ -11,7 +11,7 @@ html, body {
 main, footer {
   color: get-color(core, text);
   background: get-color(core, background);
-  padding: 0 80px;
+  padding: 0 4.4em;
 }
 
 h1, h2, h3 {
@@ -19,11 +19,11 @@ h1, h2, h3 {
 }
 
 h1 {
-  font: 500 64px/80px $font;
+  font: 500 3.5em/1.5em $font;
 }
 
 h3 {
-  font: 500 48px/64px $font;
+  font: 500 2.6em/3.5em $font;
 }
 
 a {
@@ -33,9 +33,23 @@ a {
 
 section {
   height: 100%;
-  padding-bottom: 80px;
+  padding-bottom: 4.4em;
 
   &:last-of-type {
     padding-bottom: 0;
+  }
+}
+
+@media only screen and (max-width : 860px) {
+  h3 {
+    line-height: 2.5em;
+  }
+
+  main, footer {
+    padding: 0 2.4em;
+  }
+
+  section {
+    padding-bottom:  0;
   }
 }

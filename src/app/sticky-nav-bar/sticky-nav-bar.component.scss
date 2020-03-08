@@ -1,0 +1,40 @@
+@import 'base/colors';
+@import 'helpers/functions';
+
+:host {
+  background: get-color(navbar, background);
+  box-shadow: 0 0 10px 0 get-color(navbar, box-shadow);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+
+  .header__item {
+    & > a {
+      color: get-color(navbar, text);
+      font-weight: 500;
+
+      &:hover {
+        color: get-color(header, link, hover);
+        font-weight: 600;
+      }
+    }
+
+    &--active {
+      & > a {
+        color: get-color(header, link, hover);
+        font-weight: 600;
+      }
+    }
+  }
+
+   .header__list {
+    padding: 0 80px;
+  }
+
+  .header__logo {
+    color: get-color(navbar, logo);
+    padding-left: 80px;
+  }
+}

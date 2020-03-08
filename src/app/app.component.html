@@ -1,3 +1,4 @@
+<app-sticky-nav-bar></app-sticky-nav-bar>
 <header>
   <div class="header__filter"></div>
   <div class="header__top">
@@ -6,7 +7,7 @@
       <span class="header__job">Front End Developer</span>
     </div>
     <div class="header__navigation">
-      <ul class="header__list">
+      <ul id="header-list" class="header__list">
         <li class="header__item" title="About"><a href="#about">About</a></li>
         <li class="header__item" title="Work"><a href="#work">Work</a></li>
         <li class="header__item" title="Contact"><a href="#contact">Contact</a></li>
@@ -22,7 +23,7 @@
   </div>
 </header>
 <main>
-  <section class="about">
+  <section id="section__about" class="about">
     <article class="about__profile">
       <h3><a name="about" class="article__title">About</a></h3>
       <p>
@@ -39,7 +40,7 @@
         My expertise also lies within <strong>digital maps</strong> and way finding.
       </p>
       <p>
-        <a class="link" href="#">Contact me</a> for further information, and let's work together !
+        <a class="link" href="#contact">Contact me</a> for further information, and let's work together !
       </p>
     </article>
     <article class="about__techs">
@@ -60,54 +61,25 @@
       </ul>
     </article>
   </section>
-<!--  <section class="nav-bar">-->
-<!--    <ul class="nav-bar__list">-->
-<!--      <li class="nav-bar__item"><img src="/assets/img/leaf.svg" class="logo&#45;&#45;small"></li>-->
-<!--      <li class="nav-bar__item"><h3 title="Home" class="nav-bar__title">Home</h3></li>-->
-<!--      <li class="nav-bar__item"><h3 title="About" class="nav-bar__title">About</h3></li>-->
-<!--      <li class="nav-bar__item"><h3 title="Work" class="nav-bar__title">Clients</h3></li>-->
-<!--      <li class="nav-bar__item"><h3 title="Contact" class="nav-bar__title">Contact</h3></li>-->
-<!--    </ul>-->
-<!--  </section>-->
-  <section class="work">
+  <section id="section__work" class="work">
     <article>
       <h3><a name="work" class="article__title">Work</a></h3>
       <p>I have worked with these great companies:</p>
       <ul class="work__companies">
-        <li class="work__company">
-          <a href="https://www.livingmap.com/" title="Living Map" target="_blank">
-            <img class="work__logo" src="/assets/img/companies/living-map.png">
-          </a>
-        </li>
-        <li class="work__company">
-          <a href="https://www.polestarglobal.com/" title="Pole Star" target="_blank">
-            <img class="work__logo" src="/assets/img/companies/pole-star.png">
-          </a>
-        </li>
-        <li class="work__company">
-          <a href="https://appscatter.com/" title="appScatter" target="_blank">
-            <img class="work__logo work__logo--shadow" src="/assets/img/companies/appscatter.svg">
-          </a>
-        </li>
-        <li class="work__company"><a href="https://www.sensat.co.uk/" target="_blank">Sensat</a></li>
-        <li class="work__company">
-          <a href="https://www.runpath.com/" title="Runpath" target="_blank">
-            <img class="work__logo" src="/assets/img/companies/runpath.png">
-          </a>
-        </li>
-        <li class="work__company">
-          <a href="https://send.technology/" title="Send Technology" target="_blank">
-            <img class="work__logo" src="/assets/img/companies/send-technology.svg">
+        <li *ngFor="let client of clients" class="work__company">
+          <a [href]="client.url" [title]="client.company" target="_blank">
+            <img *ngIf="client.imageUrl; else name" class="work__logo" [src]="client.imageUrl">
+            <ng-template #name> {{ client.company }}</ng-template>
           </a>
         </li>
       </ul>
     </article>
   </section>
-  <section class="contact">
+  <section id="section__contact" class="contact">
     <article>
       <h3><a name="contact" class="article__title">Contact</a></h3>
       <div class="contact__form">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf-zjLeeYMhfn01iVOO-zRqQqpGoo8bqU5HRqOWH9uc81jt6A/viewform?embedded=true" width="640" height="720" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf-zjLeeYMhfn01iVOO-zRqQqpGoo8bqU5HRqOWH9uc81jt6A/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
       </div>
     </article>
   </section>

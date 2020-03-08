@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ChartsModule } from 'ng2-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { IconsModule } from './icons.module';
-import { ClientComponent } from './project/client.component';
-import { SkillsChartComponent } from './skills-chart/skills-chart.component';
+import { StickyNavBarComponent } from './sticky-nav-bar/sticky-nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClientComponent,
-    SkillsChartComponent,
+    StickyNavBarComponent,
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
-    ChartsModule,
     IconsModule,
   ],
   providers: [],

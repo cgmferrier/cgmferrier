@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SkillsChartComponent } from './skills-chart.component';
+import { StickyNavBarComponent } from './sticky-nav-bar.component';
 
-describe('SkillsChartComponent', () => {
-  let component: SkillsChartComponent;
-  let fixture: ComponentFixture<SkillsChartComponent>;
+describe('StickyNavBarComponent', () => {
+  let component: StickyNavBarComponent;
+  let fixture: ComponentFixture<StickyNavBarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SkillsChartComponent ]
+      declarations: [ StickyNavBarComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SkillsChartComponent);
+    fixture = TestBed.createComponent(StickyNavBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

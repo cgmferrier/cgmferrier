@@ -22,14 +22,15 @@ header {
   }
 
   &__footer {
+    display: none;
     padding: 60px 80px;
     position: relative;
   }
 
   &__item {
-    font: 400 16px/64px $font;
-    letter-spacing: 6.4px;
-    margin-right: 80px;
+    font: 400 0.8em/4.7em $font;
+    letter-spacing: 0.35em;
+    margin-right: 4.4em;
     transition: font-weight ease-in-out 250ms, letter-spacing ease-in-out 250ms;
 
     & > a {
@@ -44,13 +45,13 @@ header {
 
     &:hover {
       font-weight: 600;
-      letter-spacing: 7.4px;
+      letter-spacing: 0.4em;
     }
   }
 
   &__job {
     color: get-color(header, text);
-    font: 400 24px/40px $font;
+    font: 400 1.3em/2.2em $font;
     text-transform: uppercase;
   }
 
@@ -72,7 +73,7 @@ header {
 
   &__name {
     color: get-color(header, text);
-    font: 700 48px/64px $font;
+    font: 700 2.6em/1.4em $font;
     text-transform: lowercase;
   }
 
@@ -99,9 +100,46 @@ header {
   &__top {
     display: flex;
     justify-content: space-between;
-    padding: 80px;
+    padding: 4.4em;
     position: relative;
     width: calc(100% - 160px);
     z-index: 1;
+  }
+}
+
+@media only screen and (max-width : $max-device-width) {
+  .header {
+    &__body {
+      padding: 0 2.4em 4.4em;
+    }
+
+    &__footer {
+      display: none;
+    }
+
+    &__me {
+      width: 100%;
+    }
+
+    &__navigation {
+      display: none;
+    }
+
+    &__title {
+      font-size: 2.5em;
+    }
+
+    &__top {
+      padding: 8em 2.4em 4.4em;
+      width: calc(100% - 4.8em);
+    }
+  }
+}
+
+@media only screen and (min-width : $min-device-medium-width) {
+  .header {
+    &__footer {
+      display: block;
+    }
   }
 }

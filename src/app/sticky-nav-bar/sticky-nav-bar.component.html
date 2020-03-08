@@ -1,6 +1,7 @@
 <div class="nav-bar__container" [@slideDown]="showNavBar">
   <div class="header__logo">
-    <svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <fa-icon class="header__menu-icon" [icon]="['fas', 'bars']" (click)="openSidePanel()"></fa-icon>
+    <svg class="header__logo-svg" width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <!-- Generator: sketchtool 63.1 (101010) - https://sketch.com -->
       <title>D3E2AFE6-B4B2-4570-A479-C30665E728B2</title>
       <desc>Created with sketchtool.</desc>

@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, HostBinding, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { SidePanelService } from '../shared/services/side-panel.service';
 
 @Component({
   selector: 'app-sticky-nav-bar',
@@ -19,43 +20,60 @@ export class StickyNavBarComponent implements OnInit {
   navBar: HTMLElement;
   sectionActive: string;
   showNavBar = false;
+  windowWidth = window.innerWidth;
   workSection: HTMLElement;
 
   @HostListener('window:scroll', ['$event'])
   onPageScroll(): void {
-    const navBarYPosition = this.navBar.offsetTop + this.navBar.offsetHeight;
-    const scrollPosition = window.scrollY;
-    this.showNavBar = scrollPosition > navBarYPosition;
+    this.triggerNavBar();
     this.sectionActive = this.activeSection;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event): void {
+    this.windowWidth = event.target.innerWidth;
+    this.triggerNavBar();
   }
 
   get activeSection(): string {
     const scrollPosition = window.scrollY;
     if (
-      scrollPosition >= this.aboutSection.offsetTop &&
-      scrollPosition < (this.aboutSection.offsetTop + this.aboutSection.offsetHeight)
+      scrollPosition >= this.aboutSection.offsetTop - 80 &&
+      scrollPosition < (this.aboutSection.offsetTop + this.aboutSection.offsetHeight - 80)
     ) {
       return 'about';
     }
     if (
-      scrollPosition >= this.contactSection.offsetTop &&
-      scrollPosition < (this.contactSection.offsetTop + this.contactSection.offsetHeight)
+      scrollPosition >= this.contactSection.offsetTop - 80 &&
+      scrollPosition < (this.contactSection.offsetTop + this.contactSection.offsetHeight - 80)
     ) {
       return 'contact';
     }
     if (
-      scrollPosition >= this.workSection.offsetTop &&
-      scrollPosition < (this.workSection.offsetTop + this.workSection.offsetHeight)
+      scrollPosition >= this.workSection.offsetTop - 80 &&
+      scrollPosition < (this.workSection.offsetTop + this.workSection.offsetHeight - 80)
     ) {
       return 'work';
     }
     return '';
   }
 
+  constructor(private sidePanelService: SidePanelService) {}
+
   ngOnInit(): void {
     this.aboutSection = document.getElementById('section__about');
     this.contactSection = document.getElementById('section__contact');
     this.navBar = document.getElementById('header-list');
     this.workSection = document.getElementById('section__work');
+  }
+
+  openSidePanel(): void {
+    this.sidePanelService.togglePanel(true);
+  }
+
+  private triggerNavBar(): void {
+    const navBarYPosition = this.navBar.offsetTop + this.navBar.offsetHeight;
+    const scrollPosition = window.scrollY;
+    this.showNavBar = this.windowWidth > 860 ? scrollPosition > navBarYPosition : true;
   }
 }

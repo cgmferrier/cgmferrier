@@ -1,0 +1,54 @@
+@import 'base/colors';
+@import 'helpers/functions';
+@import 'helpers/vars';
+
+:host {
+  background: get-color(core, background);
+  display: block;
+  height: 100%;
+  margin-left: -90%;
+  position: fixed;
+  top: 0;
+  width: 90%;
+  z-index: 3;
+  transition: margin-left 300ms ease-in-out;
+
+  &.open {
+    box-shadow: 0 0 10px 0 get-color(navbar, box-shadow);
+    margin-left: 0;
+  }
+
+  .header__item {
+    & > a {
+      color: get-color(core, text);
+      font-weight: 500;
+    }
+  }
+
+  .header__list {
+    flex-direction: column;
+    height: calc(100% - 3.7em);
+    width: 100%;
+  }
+
+  .header__item {
+    margin: 0;
+  }
+
+  .side-panel {
+    height: 100%;
+
+    &__close {
+      cursor: pointer;
+      float: right;
+      font: 2.5em/1.5em $font;
+      margin-right: 0.7em;
+      text-align: right;
+      transition: color 300ms ease-in-out;
+
+      &:hover {
+        color: get-color(header, link, hover);
+      }
+    }
+  }
+}

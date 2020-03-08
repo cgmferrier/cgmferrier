@@ -40,7 +40,13 @@
   }
 
   .header__menu-icon {
+    cursor: pointer;
     display: none;
+    transition: color 300ms ease-in-out;
+
+    &:hover {
+      color: get-color(core, background);
+    }
   }
 }
 

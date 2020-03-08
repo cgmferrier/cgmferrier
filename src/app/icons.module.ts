@@ -4,6 +4,7 @@ import {
   faBars,
   faLaptopCode,
   faRocket,
+  faTimes,
   faUserCheck,
 } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -23,6 +24,7 @@ export class IconsModule {
       faLaptopCode,
       faLinkedin,
       faRocket,
+      faTimes,
       faUserCheck,
     );
   }

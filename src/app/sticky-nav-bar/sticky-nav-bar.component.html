@@ -1,0 +1,19 @@
+<div class="nav-bar__container" [@slideDown]="showNavBar">
+  <div class="header__logo">
+    <svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <!-- Generator: sketchtool 63.1 (101010) - https://sketch.com -->
+      <title>D3E2AFE6-B4B2-4570-A479-C30665E728B2</title>
+      <desc>Created with sketchtool.</desc>
+      <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-1028.000000, -1256.000000)" fill="#FAD257">
+          <path d="M1069,1271 L1069,1290 L1068.16547,1290 C1066.55125,1285.56266 1062.73913,1282.13405 1058,1280.94891 L1058,1280.05099 C1062.73881,1278.86593 1066.55073,1275.4377 1068.16514,1271.0008 L1069,1271 Z M1052.99911,1256 L1053,1256.42097 C1044.18727,1258.52686 1037.52347,1268.28285 1037.52347,1280 C1037.52347,1291.18322 1043.5938,1300.57995 1051.80909,1303.24403 L1051.80868,1304 L1051.39858,1303.99651 C1038.43859,1303.77587 1028,1293.11676 1028,1280 C1028,1266.88324 1038.43859,1256.22413 1051.39858,1256.00349 L1051.80868,1256 L1052.99911,1256 Z M1073.53846,1256 C1074.89793,1256 1076,1257.06332 1076,1258.37499 L1076,1275 L1075.6061,1275 C1074.02327,1265.59552 1067.83282,1258.20894 1060.00031,1256.41687 L1060,1256 L1073.53846,1256 Z" id="CF"></path>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <ul class="header__list">
+    <li class="header__item" [class.header__item--active]="sectionActive === 'about'" title="About"><a href="#about">About</a></li>
+    <li class="header__item" [class.header__item--active]="sectionActive === 'work'" title="Work"><a href="#work">Work</a></li>
+    <li class="header__item" [class.header__item--active]="sectionActive === 'contact'" title="Contact"><a href="#contact">Contact</a></li>
+  </ul>
+</div>

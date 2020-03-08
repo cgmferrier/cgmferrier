@@ -19,12 +19,11 @@ export class AppComponent {
     },
     {
       company: 'AppScatter',
-      imageUrl: '/assets/img/companies/app-scatter.png',
+      imageUrl: '/assets/img/companies/appscatter.svg',
       url: 'https://appscatter.com/',
     },
     {
       company: 'Sensat',
-      imageUrl: '/assets/img/companies/sensat.png',
       url: 'https://www.sensat.co.uk/',
     },
     {
@@ -34,7 +33,7 @@ export class AppComponent {
     },
     {
       company: 'Send Technology',
-      imageUrl: '/assets/img/companies/send-technology.png',
+      imageUrl: '/assets/img/companies/send-technology.svg',
       url: 'https://send.technology/',
     },
   ];

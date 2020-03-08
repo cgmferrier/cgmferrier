@@ -1,5 +1,5 @@
 export interface Client {
   company: string;
-  imageUrl: string;
+  imageUrl?: string;
   url: string;
 }
